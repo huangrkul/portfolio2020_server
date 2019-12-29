@@ -16,7 +16,6 @@ app.get('/weather', (req, res) => {
   axios.get(url)
     .then(result => {
       const currentWeather = new Weather(result.data.currently);
-      console.log(result);
       res.send(currentWeather);
     })
 });
