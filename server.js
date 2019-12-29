@@ -1,8 +1,11 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const axios = require('axios');
 require('dotenv').config();
 const port = process.env.PORT || 3001;
+
+app.use(cors());
 
 function Weather(day) {
   this.temp = day.temperature;
